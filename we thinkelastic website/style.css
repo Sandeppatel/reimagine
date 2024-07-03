@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page3 {
+    height: 100%;
+    width: 100%;
+    padding: 64px 64px;
+    overflow: hidden;
+}
+
+#cardcontainer {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    height: 100%;
+    width: 32%;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.6s, width 1s linear;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    padding: 3px 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.363);
+    transition: transform 0.6s;
+}
+
+.front {
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.back {
+    text-align: left;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.card.enlarge {
+    width: 50%;
+}
+
+#front1 {
+    background-image: url("https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#front2 {
+    background-image: url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+#front3 {
+    background-image: url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+
+.move {
+    position: relative;
+}
+.logos {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
