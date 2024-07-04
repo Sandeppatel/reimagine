@@ -158,7 +158,7 @@ gsap.from(".mainone .cardcontainer", {
 });
 
 gsap.from(".page4 h1", {
-    y: 100,
+    y: 10,
     opacity: 0,
     duration: 1,
     stagger: 0.3,
